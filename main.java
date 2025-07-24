@@ -40,9 +40,9 @@ public class main {
                     System.out.print("Digite o elemento a inserir: ");
                     int elemento = scanner.nextInt();
                     if (lista.inserir(elemento)) {
-                        System.out.println("✓ Elemento " + elemento + " inserido com sucesso!");
+                        System.out.println("Elemento " + elemento + " inserido com sucesso!");
                     } else {
-                        System.out.println("✗ Falha ao inserir elemento!");
+                        System.out.println("Falha ao inserir elemento!");
                     }
                     break;
                 
@@ -52,9 +52,9 @@ public class main {
                     System.out.print("Digite a posição (0 a " + lista.getTamanho() + "): ");
                     int posicao = scanner.nextInt();
                     if (lista.inserirNaPosicao(elemento, posicao)) {
-                        System.out.println("✓ Elemento " + elemento + " inserido na posição " + posicao + "!");
+                        System.out.println("Elemento " + elemento + " inserido na posição " + posicao + "!");
                     } else {
-                        System.out.println("✗ Falha ao inserir elemento!");
+                        System.out.println("Falha ao inserir elemento!");
                     }
                     break;
                 
@@ -62,9 +62,9 @@ public class main {
                     System.out.print("Digite o elemento a remover: ");
                     elemento = scanner.nextInt();
                     if (lista.remover(elemento)) {
-                        System.out.println("✓ Elemento " + elemento + " removido com sucesso!");
+                        System.out.println("Elemento " + elemento + " removido com sucesso!");
                     } else {
-                        System.out.println("✗ Elemento não encontrado ou erro na remoção!");
+                        System.out.println("Elemento não encontrado ou erro na remoção!");
                     }
                     break;
                 
@@ -76,9 +76,9 @@ public class main {
                     System.out.print("Digite a posição a remover (0 a " + (lista.getTamanho() - 1) + "): ");
                     posicao = scanner.nextInt();
                     if (lista.removerNaPosicao(posicao)) {
-                        System.out.println("✓ Elemento removido da posição " + posicao + "!");
+                        System.out.println("Elemento removido da posição " + posicao + "!");
                     } else {
-                        System.out.println("✗ Falha ao remover elemento!");
+                        System.out.println("Falha ao remover elemento!");
                     }
                     break;
                 
@@ -87,40 +87,40 @@ public class main {
                     elemento = scanner.nextInt();
                     posicao = lista.buscar(elemento);
                     if (posicao != -1) {
-                        System.out.println("✓ Elemento " + elemento + " encontrado na posição " + posicao);
+                        System.out.println("Elemento " + elemento + " encontrado na posição " + posicao);
                     } else {
-                        System.out.println("✗ Elemento " + elemento + " não encontrado na lista");
+                        System.out.println("Elemento " + elemento + " não encontrado na lista");
                     }
                     break;
                 
                 case 6:
                     if (lista.estaVazia()) {
-                        System.out.println("✗ Lista está vazia!");
+                        System.out.println("Lista está vazia!");
                         break;
                     }
                     System.out.print("Digite a posição (0 a " + (lista.getTamanho() - 1) + "): ");
                     posicao = scanner.nextInt();
                     try {
                         elemento = lista.obter(posicao);
-                        System.out.println("✓ Elemento na posição " + posicao + ": " + elemento);
+                        System.out.println("Elemento na posição " + posicao + ": " + elemento);
                     } catch (IndexOutOfBoundsException e) {
-                        System.out.println("✗ " + e.getMessage());
+                        System.out.println(e.getMessage());
                     }
                     break;
                 
                 case 7:
                     if (lista.estaVazia()) {
-                        System.out.println("✓ A lista está vazia");
+                        System.out.println("A lista está vazia");
                     } else {
-                        System.out.println("✗ A lista NÃO está vazia");
+                        System.out.println("A lista NÃO está vazia");
                     }
                     break;
                 
                 case 8:
                     if (lista.estaCheia()) {
-                        System.out.println("✓ A lista está cheia");
+                        System.out.println("A lista está cheia");
                     } else {
-                        System.out.println("✗ A lista NÃO está cheia");
+                        System.out.println("A lista NÃO está cheia");
                     }
                     break;
                 
@@ -131,7 +131,7 @@ public class main {
                 
                 case 10:
                     lista.limpar();
-                    System.out.println("✓ Lista limpa com sucesso!");
+                    System.out.println("Lista limpa com sucesso!");
                     break;
                 
                 case 11:
@@ -150,7 +150,7 @@ public class main {
                     break;
                 
                 default:
-                    System.out.println("✗ Opção inválida! Tente novamente.");
+                    System.out.println("Opção inválida! Tente novamente.");
             }
             
             if (opcao != 0) {
